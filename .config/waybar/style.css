@@ -1,0 +1,313 @@
+@import "colors.css";
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-size: 11px;
+    font-family: "BBH Bartle","Font Awesome 7";
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color:@background ;
+}
+#workspaces{
+  background-color: @scrim;
+  border-radius: 10px;
+  border:1px solid @source_color;
+  min-width: 150px;
+  margin-top: 4px;
+}
+#workspaces button {
+    margin: 2px;
+    background-color: @scrim;
+    color: @source_color;
+    min-height: 25px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+#workspaces button.active {
+  background-color: @source_color;
+  color: @scrim;
+  transition: ease-in-out 0.2s;
+}
+
+#workspaces button:hover {
+  background: @background;
+  transition: ease-in-out 0.2s;
+  border-color: @source_color;
+  color: @source_color;
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+#pulseaudio:hover {
+  background-color: @source_color;
+  color: @scrim;
+  transition: ease-in-out 0.2s;
+}
+
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+/*
+#################
+#####MODULES#####
+#################
+*/
+
+
+.modules-right{
+    background-color: @scrim;
+    border-radius: 10px;
+    border: 1px solid @source_color;
+    margin-right: 8px;
+    margin-top: 4px;
+}
+
+.modules-left{
+    background-color: @scrim;
+    border-radius: 10px;
+    color: @source_color;
+    border: 1px solid @source_color;
+    margin-left: 8px;
+    margin-top: 4px;
+}
+
+/*
+#################
+######CLOCK######
+#################
+*/
+
+#clock {
+    color: @scrim;
+    background-color: @source_color;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    margin-right: 10px;
+    border-radius: 5px;
+    min-width: 70px;
+}
+#clock:hover {
+    background-color: @scrim;
+    color: @source_color;
+    border:1px solid @source_color;
+    transition: ease-in-out 0.2s;
+}
+
+/*
+#################
+#####BATTERY#####
+#################
+*/
+
+#battery {
+    color: @scrim;
+    background-color: @source_color;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 5px;
+    transition: ease-in-out 0.2s;
+    min-width: 75px;
+}
+#battery:hover {
+    background-color: @scrim;
+    color: @source_color;
+    border-color: @source_color;
+    border-radius: 5px;
+}
+
+#battery.charging, #battery.plugged {
+    color: @scrim;
+    background-color: @source_color;
+}
+#battery.charging:hover {
+    background-color: @scrim;
+    color: @source_color;
+    border:1px solid @source_color;
+}
+
+/*
+#################
+#####NETWORK#####
+#################
+*/
+
+#network {
+    font-size: 15px;
+    color: @scrim;
+    background-color: @source_color;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border:1px solid @source_color;
+    border-radius: 5px;
+    min-width: 25px;
+}
+#network:hover {
+    background-color: @scrim;
+    color: @source_color;
+    border-color: @source_color;
+    transition: ease-in-out 0.2s;
+}
+#network.disconnected {
+    background-color: #f53c3c;
+}
+#network.disconnected:hover {
+    background-color: #120e0e;
+}
+
+/*
+#################
+######AUDIO######
+#################
+*/
+
+#pulseaudio {
+    color: @scrim;
+    background-color: @source_color;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    margin-right: 6px;
+    min-width: 80px;
+    border-radius: 8px;
+}
+#pulseaudio:hover {
+    background-color: @scrim;
+    color: @source_color;
+    border:1px solid @source_color;
+}
+#pulseaudio.muted {
+    color: @scrim;
+    background-color: @source_color;
+    min-width: 20px;
+    min-width: 30px;
+}
+#pulseaudio.muted:hover {
+    background-color: @scrim;
+    color: @source_color;
+}
+
+/*
+################
+#####CUSTOM#####
+################
+*/
+
+
+/*PowerButton*/
+#custom-PowerButton{
+    min-width: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    color: @scrim;
+    background-color: @source_color;
+    border: 1px solid @source_color;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    margin-right: 10px;
+    transition: ease-in-out 0.2s;
+}
+#custom-PowerButton:hover{
+    background-color: @scrim;
+    color: @source_color;
+}
+
+/*Notifications*/
+#custom-Bluetooth{
+    min-width: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: @scrim;
+    background-color: @source_color;
+    border: 1px solid @source_color;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    margin-right: 10px;
+    transition: ease-in-out 0.2s;
+}
+#custom-Bluetooth:hover{
+    background-color: @scrim;
+    color: @source_color;
+}
+
+/*ChatGpt*/
+#custom-ChatGPT{
+    background-image:url("/home/TheMaz/.config/waybar/chatgpt_icons/chatgpt.svg");
+    background-color: @source_color;
+    border: 1px solid @source_color;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    margin-right: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: ease-in-out 0.2s;
+    background-size: 85%;
+}
+#custom-ChatGPT:hover{
+    background-color: @scrim;
+    color: @source_color;
+}
+
+/*Apps*/
+#custom-Apps{
+    background-color: @source_color;
+    color: @scrim;
+    border: 1px solid @source_color;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    margin-right: 10px;
+    transition: ease-in-out 0.2s;
+    min-width: 50px;
+    font-size: 10px;
+}
+#custom-Apps:hover{
+    background-color: @scrim;
+    color: @source_color;
+}
+
+/*Spotify*/
+#custom-Spotify{
+    background-color: @source_color;
+    color: @scrim;
+    border: 1px solid @source_color;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    margin-right: 10px;
+    transition: ease-in-out 0.2s;
+    min-width: 25px;
+    font-size: 15px;
+}
+#custom-Spotify:hover{
+    background-color: @scrim;
+    color: @source_color;
+}
+
+
