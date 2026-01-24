@@ -1,0 +1,111 @@
+{
+    "layer": "top",
+
+    "modules-left": ["group/groupGauche","group/groupDroit"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["pulseaudio","battery", "network","clock","custom/PowerButton"],
+    "hyprland/window": {
+        "max-length": 50
+    },
+
+    "group/groupDroit": {
+    "orientation": "horizontal",
+    "modules": ["custom/Bluetooth","custom/ChatGPT","custom/Spotify"]
+    },
+    "group/groupGauche": {
+    "orientation": "horizontal",
+    "modules": ["custom/Apps"]
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt":"{:%a %d %b}",
+        "tooltip": false
+    },
+
+    "network": {
+        "interface": "wlan0",
+        "format": "{ename}",
+        "format-wifi": "",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "", //An empty format will hide the module.//
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected 󰖪",
+        "max-length": 50
+    },
+    "pulseaudio": {
+    "tooltip": false,
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% ",
+    "format-muted": "",
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "phone-muted": "",
+        "portable": "",
+        "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+},
+    "hyprland/workspaces": {
+    "format": "{name}",
+    "all-outputs": false,
+    "active-only": false,
+    "persistent-workspaces": {
+        "*":5
+        }
+    },
+    "custom/PowerButton":{
+        "format":"⏻",
+        "tooltip":false,
+        "on-click": "wlogout"
+    },
+    "custom/ShellButton":{
+        "format":"",
+        "tooltip":false,
+        /*Put your shell here*/
+        "on-click": "kitty"
+    },
+    "custom/Bluetooth":{
+        "format":"",
+        "tooltip":false,
+        "on-click":"blueman-manager"
+    },
+    "custom/ChatGPT": {
+        /*Add/delete some spaces to adjust the width of the button*/
+        /*if you want to change the icon, you need to put an .svg image*/
+        "format": "        ",
+        "tooltip": false,
+        /*Change firefox with your internet browther*/
+        "on-click": "firefox --new-window https://chat.openai.com"
+    },
+    "custom/Apps": {
+        "format": "Apps",
+        "tooltip": false,
+        /*Change wofi with your app manager (with the correct command aswell if needed)*/
+        "on-click": "wofi --show drun"
+    },
+    "custom/Spotify": {
+        "format": "",
+        "tooltip": false,
+        /*Change wofi with your app manager (with the correct command aswell if needed)*/
+        "on-click": "spotify-launcher"
+    },
+    "custom/Test": {
+        "format": "",
+        "tooltip": false,
+        /*Change wofi with your app manager (with the correct command aswell if needed)*/
+        "on-click": "spotify-launcher"
+    }
+
+}
