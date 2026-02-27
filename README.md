@@ -3,6 +3,10 @@ shell: kitty
 file manager: nemo
 apps manager: wofi
 sreenshots: slurp
+Bar: waybar
+Notifications: swaync
+Hypridle
+Wlogout
 <br>
 Emoji keyboard
 theme switcher
