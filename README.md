@@ -7,6 +7,7 @@ Bar: waybar
 Notifications: swaync
 Hypridle
 Wlogout
+Swww
 <br>
 Emoji keyboard
 theme switcher
