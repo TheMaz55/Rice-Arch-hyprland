@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <path_to_image>"
+    exit 1
+fi
+
+IMAGE="$1"
+
+notify-send "Changing Theme" "Applying new wallpaper and updating colors..."
+
+swww img "$IMAGE" --transition-type=center --transition-step=1 --transition-fps=60
+
+matugen image "$IMAGE"
+
+pkill waybar
+waybar > /dev/null 2>&1 &
+
+notify-send "Theme Applied" "Wallpaper and theme updated successfully!"
+
