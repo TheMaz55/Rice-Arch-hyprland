@@ -7,6 +7,7 @@ Bar: waybar
 Notifications: swaync
 Bluetooth: blueman manager
 Audio: pulse audio
+text editor: gnome text editor
 Hypridle
 Wlogout
 Swww
