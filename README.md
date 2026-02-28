@@ -5,11 +5,13 @@ apps manager: wofi
 sreenshots: slurp
 Bar: waybar
 Notifications: swaync
+Bluetooth: blueman manager
+Audio: pulse audio
 Hypridle
 Wlogout
 Swww
 <br>
 Emoji keyboard
-theme switcher
+theme switcher: walset
 <br>
 Actually working on it, stay tunned
