@@ -11,6 +11,7 @@ text editor: gnome text editor
 Hypridle
 Wlogout
 Swww
+nm-connection-editor + NetworkManager
 <br>
 Emoji keyboard
 theme switcher: walset
