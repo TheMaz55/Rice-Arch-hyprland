@@ -11,6 +11,7 @@ text editor: gnome text editor
 Hypridle
 Wlogout
 Swww
+nwg-look
 nm-connection-editor + NetworkManager
 <br>
 Emoji keyboard
