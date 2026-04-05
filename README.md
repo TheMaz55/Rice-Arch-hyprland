@@ -15,5 +15,6 @@ nm-connection-editor + NetworkManager
 <br>
 Emoji keyboard
 theme switcher: walset
+Audio visualiser: CAVA
 <br>
 Actually working on it, stay tunned
