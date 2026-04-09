@@ -1,4 +1,8 @@
-# font_family  family="BBH Bartle"
+#FONTS
+font_family      family='Iosevka Term' postscript_name=Iosevka-Term
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
 font_size    12
 
 disable_ligatures no
@@ -42,11 +46,3 @@ color14 #56b6c2
 color15 #abb2bf
 selection_foreground #302834
 selection_background #979eab
-
-
-# BEGIN_KITTY_FONTS
-font_family      family="Iosevka Term"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS
