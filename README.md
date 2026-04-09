@@ -1,4 +1,6 @@
-  <h1>Screenshots:</h1>
+<h1>Screenshots:</h1>
+
+  <hr>
     <h1>Applications:</h1>
     <ul>
         <li>shell: kitty</li>
@@ -15,6 +17,7 @@
         <li>Wallpaper: Swww</li>
         <li>GTK-Theme: nwg-look</li>
     </ul>
+    <hr>
 <h1>Features:</h1>
     <ul>
         <li>Theme selector: Walset</li>
@@ -22,14 +25,20 @@
     </ul>
 <hr>
 <h1>Shortcut</h1>
-| Shortcut | Action |
-|----------|--------|
-| `Super + Enter` | Open terminal |
-| `Alt + Space` | Application launcher |
-| `Super + C` | Close window |
-| `Super + [1-9]` | Switch workspace |
-| `Super + Shift + [1-9]` | Move to workspace |
-| `Super + F` | Toggle fullscreen |
+<table>
+    <tr>
+        <th>shortcut</th>
+        <th>action</th>
+    </tr>
+    <tr>
+        <td>Super + a</td>
+        <td>Terminal</td>
+    </tr>
+    <tr>
+        <td>Super + e</td>
+        <td>Apps manager</td>
+    </tr>
+</table>
 nm-connection-editor + NetworkManager
 <br>
 Actually working on it, stay tunned
