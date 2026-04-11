@@ -127,7 +127,7 @@ window#waybar {
 #battery:hover {
     background-color: @scrim;
     color: @source_color;
-    border-color: @source_color;
+    border:1px solid @source_color;
     border-radius: 5px;
 }
 
@@ -253,7 +253,7 @@ window#waybar {
 
 /*ChatGpt*/
 #custom-ChatGPT{
-    background-image:url("/home/TheMaz/.config/waybar/chatgpt_icons/chatgpt.svg");
+    background-image:url("chatgpt_icons/chatgpt.svg");
     background-color: @source_color;
     border: 1px solid @source_color;
     border-radius: 5px;

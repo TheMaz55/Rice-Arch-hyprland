@@ -8,18 +8,22 @@
         "max-length": 50
     },
 
-    "group/groupDroit": {
+    "group/groupGauche": {
     "orientation": "horizontal",
     "modules": ["custom/Bluetooth","custom/ChatGPT","custom/Spotify"]
     },
-    "group/groupGauche": {
+    "group/groupDroit": {
     "orientation": "horizontal",
     "modules": ["custom/Apps"]
     },
 
     "battery": {
         "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-charging": "{capacity}% {icon}",
+        "format-icons": {
+        "default": ["", "", "", "", ""],
+        "charging": ["󰢟", "󰢜", "󰢝", "󰢞", "󰂅"],
+    	},
     },
     "clock": {
         "format": "{:%H:%M}",
@@ -32,17 +36,18 @@
         "format": "{ename}",
         "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-        "format-disconnected": "", //An empty format will hide the module.//
+        "format-disconnected": "󱚼", //An empty format will hide the module.//
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
         "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected 󰖪",
-        "max-length": 50
+        "max-length": 50,
+        "on-click": "nm-connection-editor",
     },
     "pulseaudio": {
     "tooltip": false,
     "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% ",
+    "format-bluetooth": "{volume}% ",
     "format-muted": "",
     "format-icons": {
         "headphone": "",
@@ -86,8 +91,8 @@
         /*if you want to change the icon, you need to put an .svg image*/
         "format": "        ",
         "tooltip": false,
-        /*Change firefox with your internet browther*/
-        "on-click": "firefox --new-window https://chat.openai.com"
+        /*Change firefox with your internet browser*/
+        "on-click": "firefox --new-window https://gemini.google.com"
     },
     "custom/Apps": {
         "format": "Apps",
@@ -98,14 +103,6 @@
     "custom/Spotify": {
         "format": "",
         "tooltip": false,
-        /*Change wofi with your app manager (with the correct command aswell if needed)*/
         "on-click": "spotify-launcher"
     },
-    "custom/Test": {
-        "format": "",
-        "tooltip": false,
-        /*Change wofi with your app manager (with the correct command aswell if needed)*/
-        "on-click": "spotify-launcher"
-    }
-
 }
