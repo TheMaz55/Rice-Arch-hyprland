@@ -1,0 +1,11 @@
+[Unit]
+Description=Lance le check batterie toutes les 5 minutes
+
+[Timer]
+# Se lance 1 minute après le boot
+OnBootSec=1min
+# Puis se relance toutes les 5 minutes (intervalle)
+OnUnitActiveSec=1min
+
+[Install]
+WantedBy=timers.target

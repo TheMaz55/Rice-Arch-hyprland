@@ -1,0 +1,13 @@
+[Unit]
+Description=Script de surveillance de la batterie
+
+[Service]
+ExecStart=%h/.local/bin/batteryCheck
+# On s'assure que le service a accès au bus de session
+Environment=DISPLAY=:0
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus
+# On force le service à attendre que le bureau soit prêt
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
