@@ -9,7 +9,7 @@ IMAGE="$1"
 
 notify-send "Changing Theme" "Applying new wallpaper and updating colors..."
 
-swww img "$IMAGE" --transition-type=center --transition-step=0.1 --transition-fps=60
+awww img "$IMAGE" --transition-type=center --transition-fps=60
 
 matugen image "$IMAGE" --source-color-index 0
 

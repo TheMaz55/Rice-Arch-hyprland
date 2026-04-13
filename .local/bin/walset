@@ -8,7 +8,7 @@ IFS=$'\n'
 
 SELECTED_WALL=$(for a in *.jpg *.png *.jpeg; do
     echo -en "$a\0icon\x1f$a\n"
-done | wofi -dmenu -p "Wallpaper")
+done | rofi -dmenu -p "Wallpaper" -show-icons)
 
 if [ -n "$SELECTED_WALL" ]; then
     walset-backend "$WALL_DIR/$SELECTED_WALL"
