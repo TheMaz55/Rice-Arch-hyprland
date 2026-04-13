@@ -23,6 +23,7 @@
     <ul>
         <li>Theme selector: Walset</li>
         <li>Audio visualiser: CAVA</li>
+        <li>Low battery warning</li>
     </ul>
 <hr>
 <h1>Shortcut</h1>
