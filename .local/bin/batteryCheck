@@ -3,13 +3,9 @@
 # On récupère les infos
 LEVEL=$(acpi -b | grep -P -o '[0-9]+(?=%)')
 STATUS=$(acpi -b | grep "Discharging")
-THRESHOLD=15 # Augmente un peu pour le test
-
-# LOG DE DEBUG : Cette ligne apparaîtra dans 'journalctl'
-echo "Check: Status=[$STATUS], Level=[$LEVEL], Threshold=[$THRESHOLD]"
+THRESHOLD=15 
 
 if [[ -n "$STATUS" && "$LEVEL" -lt "$THRESHOLD" ]]; then
-    # On ajoute DBUS ici aussi au cas où
     export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus
     /usr/bin/notify-send "Batterie Faible"
 else
