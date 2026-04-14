@@ -2,8 +2,9 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-size: 11px;
+    font-size: 10px;
     font-family: "BBH Bartle","Font Awesome 7";
+    min-height: 0;
 }
 
 window#waybar {
@@ -19,14 +20,12 @@ window#waybar {
   background-color: @scrim;
   border-radius: 10px;
   border:1px solid @source_color;
-  min-width: 150px;
   margin-top: 4px;
 }
 #workspaces button {
     margin: 2px;
     background-color: @scrim;
     color: @source_color;
-    min-height: 25px;
     margin-top: 3px;
     margin-bottom: 3px;
 }
@@ -93,8 +92,8 @@ window#waybar {
 #clock {
     color: @scrim;
     background-color: @source_color;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     margin-left: 6px;
     margin-right: 10px;
     border-radius: 5px;
@@ -116,8 +115,8 @@ window#waybar {
 #battery {
     color: @scrim;
     background-color: @source_color;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     margin-left: 6px;
     margin-right: 6px;
     border-radius: 5px;
@@ -148,11 +147,11 @@ window#waybar {
 */
 
 #network {
-    font-size: 15px;
+    font-size: 14px;
     color: @scrim;
     background-color: @source_color;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     margin-left: 6px;
     margin-right: 6px;
     border:1px solid @source_color;
@@ -181,8 +180,8 @@ window#waybar {
 #pulseaudio {
     color: @scrim;
     background-color: @source_color;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     margin-left: 6px;
     margin-right: 6px;
     min-width: 80px;
@@ -196,7 +195,6 @@ window#waybar {
 #pulseaudio.muted {
     color: @scrim;
     background-color: @source_color;
-    min-width: 20px;
     min-width: 30px;
 }
 #pulseaudio.muted:hover {
@@ -214,14 +212,14 @@ window#waybar {
 /*PowerButton*/
 #custom-PowerButton{
     min-width: 25px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     color: @scrim;
     background-color: @source_color;
     border: 1px solid @source_color;
     border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     margin-left: 6px;
     margin-right: 10px;
     transition: ease-in-out 0.2s;
@@ -234,14 +232,14 @@ window#waybar {
 /*Notifications*/
 #custom-Bluetooth{
     min-width: 25px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: @scrim;
     background-color: @source_color;
     border: 1px solid @source_color;
     border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     margin-left: 6px;
     margin-right: 10px;
     transition: ease-in-out 0.2s;
@@ -257,15 +255,15 @@ window#waybar {
     background-color: @source_color;
     border: 1px solid @source_color;
     border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     margin-left: 6px;
     margin-right: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     transition: ease-in-out 0.2s;
-    background-size: 85%;
+    background-size: 80%;
 }
 #custom-ChatGPT:hover{
     background-color: @scrim;
@@ -278,8 +276,8 @@ window#waybar {
     color: @scrim;
     border: 1px solid @source_color;
     border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     margin-left: 6px;
     margin-right: 10px;
     transition: ease-in-out 0.2s;
@@ -297,17 +295,15 @@ window#waybar {
     color: @scrim;
     border: 1px solid @source_color;
     border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     margin-left: 6px;
     margin-right: 10px;
     transition: ease-in-out 0.2s;
     min-width: 25px;
-    font-size: 15px;
+    font-size: 14px;
 }
 #custom-Spotify:hover{
     background-color: @scrim;
     color: @source_color;
 }
-
-
